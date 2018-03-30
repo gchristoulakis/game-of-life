@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import javax.swing.ImageIcon;
 
 import javax.swing.BorderFactory;
 import net.miginfocom.swing.MigLayout;
@@ -94,6 +95,10 @@ public class GameWindow {
 		panelButtons.add(pauseBtn);
 		
         frame.setResizable(false);
+		frame.setTitle("Game of Life");
+		frame.setIconImage(
+			(new ImageIcon(getClass().getClassLoader().getResource("rsc/gol.png"))).getImage()
+		);
 		
 		int rows = CANVAS_WIDTH / RECT_SIZE;
 		int columns = CANVAS_HEIGHT / RECT_SIZE;
